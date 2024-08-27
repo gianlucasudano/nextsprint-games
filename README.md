@@ -35,12 +35,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## resources / links / documentation
+- https://mockapi.io/
+- https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
+- https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
+- https://react.dev/reference/rsc/server-actions
+- https://www.youtube.com/watch?v=dDpZfOQBMaU
+- https://github.com/vercel/next.js/tree/canary/examples/next-forms
+- https://nextjsstarter.com/blog/nextjs-caching-strategies-for-optimal-performance/
+- https://www.youtube.com/watch?v=9UCoVM6QhnU
+- https://nextjs.org/docs/app/building-your-application/routing/colocation
 
-https://mockapi.io/
-https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
-https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
-https://react.dev/reference/rsc/server-actions
-https://www.youtube.com/watch?v=dDpZfOQBMaU
-https://github.com/vercel/next.js/tree/canary/examples/next-forms
-https://nextjsstarter.com/blog/nextjs-caching-strategies-for-optimal-performance/
-https://www.youtube.com/watch?v=9UCoVM6QhnU
+## TODO 
+- link components, and buttons are not agnostic (reason: Reduce execution time, and focus on functionality)
