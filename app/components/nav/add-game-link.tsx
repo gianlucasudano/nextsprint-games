@@ -1,10 +1,10 @@
 import Link from "next/link";
-import styles from "./button.module.css";
+import styles from "./add-game-link.module.css";
 import Image from "next/image";
 
 export function AddGameLink() {
   return (
-    <Link className={styles.addGameLink} href="/games/add-game">
+    <Link className={`${styles.addGameLink} primary on-primary-text`} href="/add-game">
       <Image
         src="/plus-icon.svg"
         alt="Plus Icon"
@@ -12,7 +12,7 @@ export function AddGameLink() {
         height={16}
         priority
       />
-      Game
+      <span className="label-medium">Game</span>
     </Link>
   );
 }

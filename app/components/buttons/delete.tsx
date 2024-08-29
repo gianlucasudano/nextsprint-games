@@ -8,7 +8,7 @@ export function Delete() {
     const { pending } = useFormStatus();
   
     return (
-      <button className={`${styles.buttonSVG} ${styles.button}`} type="submit" aria-disabled={pending}>
+      <button className={`${styles.buttonSVG} ${styles.button} background`} type="submit" aria-disabled={pending}>
          <Image
               src="/red-x-icon.svg"
               alt="Delete Icon"

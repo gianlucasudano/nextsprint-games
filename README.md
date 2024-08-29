@@ -45,6 +45,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - https://nextjsstarter.com/blog/nextjs-caching-strategies-for-optimal-performance/
 - https://www.youtube.com/watch?v=9UCoVM6QhnU
 - https://nextjs.org/docs/app/building-your-application/routing/colocation
+- https://nextjs.org/docs/app/building-your-application/optimizing/fonts
+
 
 ## TODO 
 - link components, and buttons are not agnostic (reason: Reduce execution time, and focus on functionality)
+- remove unused css

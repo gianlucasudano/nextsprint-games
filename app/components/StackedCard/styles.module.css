@@ -1,0 +1,38 @@
+.layout {
+  display: flex;
+  width: 360px;
+  height: 360px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  transition: background-color, box-shadow 0.3s ease-out allow-discrete;
+}
+
+
+.filled {
+  composes: layout;
+  background: var(--md-ref-palette-neutral90);
+}
+
+.filled:hover {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.08
+  ); /* --md-ref-palette-neutral10 + 0.08 opacity */
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.filled:focus,
+.filled:active {
+  background-color: rgba(
+    25,
+    28,
+    30,
+    0.12
+  ); /* --md-ref-palette-neutral10 + 0.12 opacity */
+}
