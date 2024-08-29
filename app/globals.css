@@ -40,8 +40,6 @@
   --card-border-rgb: 131, 134, 135;
 } */
 
-
-
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -210,7 +208,7 @@
   --md-sys-color-surface-tint-light: #00658e;
   --md-sys-color-outline-variant-light: #c1c7ce;
   --md-sys-color-scrim-light: #000000;
-  
+
   /* display - large */
   --md-sys-typescale-display-large-font-family-name: Roboto;
   --md-sys-typescale-display-large-font-family-style: Regular;
@@ -259,7 +257,7 @@
   --md-sys-typescale-body-large-font-weight: 400px;
   --md-sys-typescale-body-large-font-size: 16px;
   --md-sys-typescale-body-large-line-height: 24px;
-  --md-sys-typescale-body-large-letter-spacing: 0.50px;
+  --md-sys-typescale-body-large-letter-spacing: 0.5px;
   /* body - medium */
   --md-sys-typescale-body-medium-font-family-name: Roboto;
   --md-sys-typescale-body-medium-font-family-style: Regular;
@@ -273,28 +271,28 @@
   --md-sys-typescale-body-small-font-weight: 400px;
   --md-sys-typescale-body-small-font-size: 12px;
   --md-sys-typescale-body-small-line-height: 16px;
-  --md-sys-typescale-body-small-letter-spacing: 0.40px;
+  --md-sys-typescale-body-small-letter-spacing: 0.4px;
   /* label - large */
   --md-sys-typescale-label-large-font-family-name: Roboto;
   --md-sys-typescale-label-large-font-family-style: Medium;
   --md-sys-typescale-label-large-font-weight: 500px;
   --md-sys-typescale-label-large-font-size: 14px;
   --md-sys-typescale-label-large-line-height: 20px;
-  --md-sys-typescale-label-large-letter-spacing: 0.10px;
+  --md-sys-typescale-label-large-letter-spacing: 0.1px;
   /* label - medium */
   --md-sys-typescale-label-medium-font-family-name: Roboto;
   --md-sys-typescale-label-medium-font-family-style: Medium;
   --md-sys-typescale-label-medium-font-weight: 500px;
   --md-sys-typescale-label-medium-font-size: 12px;
   --md-sys-typescale-label-medium-line-height: 16px;
-  --md-sys-typescale-label-medium-letter-spacing: 0.50px;
+  --md-sys-typescale-label-medium-letter-spacing: 0.5px;
   /* label - small */
   --md-sys-typescale-label-small-font-family-name: Roboto;
   --md-sys-typescale-label-small-font-family-style: Medium;
   --md-sys-typescale-label-small-font-weight: 500px;
   --md-sys-typescale-label-small-font-size: 11px;
   --md-sys-typescale-label-small-line-height: 16px;
-  --md-sys-typescale-label-small-letter-spacing: 0.50px;
+  --md-sys-typescale-label-small-letter-spacing: 0.5px;
   /* title - large */
   --md-sys-typescale-title-large-font-family-name: Roboto;
   --md-sys-typescale-title-large-font-family-style: Regular;
@@ -315,43 +313,59 @@
   --md-sys-typescale-title-small-font-weight: 500px;
   --md-sys-typescale-title-small-font-size: 14px;
   --md-sys-typescale-title-small-line-height: 20px;
-  --md-sys-typescale-title-small-letter-spacing: 0.10px;
+  --md-sys-typescale-title-small-letter-spacing: 0.1px;
 }
 
 :root {
   --md-sys-color-primary: var(--md-sys-color-primary-light);
   --md-sys-color-on-primary: var(--md-sys-color-on-primary-light);
   --md-sys-color-primary-container: var(--md-sys-color-primary-container-light);
-  --md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container-light);
+  --md-sys-color-on-primary-container: var(
+    --md-sys-color-on-primary-container-light
+  );
   --md-sys-color-secondary: var(--md-sys-color-secondary-light);
   --md-sys-color-on-secondary: var(--md-sys-color-on-secondary-light);
-  --md-sys-color-secondary-container: var(--md-sys-color-secondary-container-light);
-  --md-sys-color-on-secondary-container: var(--md-sys-color-on-secondary-container-light);
+  --md-sys-color-secondary-container: var(
+    --md-sys-color-secondary-container-light
+  );
+  --md-sys-color-on-secondary-container: var(
+    --md-sys-color-on-secondary-container-light
+  );
   --md-sys-color-tertiary: var(--md-sys-color-tertiary-light);
   --md-sys-color-on-tertiary: var(--md-sys-color-on-tertiary-light);
-  --md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-light);
-  --md-sys-color-on-tertiary-container: var(--md-sys-color-on-tertiary-container-light);
+  --md-sys-color-tertiary-container: var(
+    --md-sys-color-tertiary-container-light
+  );
+  --md-sys-color-on-tertiary-container: var(
+    --md-sys-color-on-tertiary-container-light
+  );
   --md-sys-color-error: var(--md-sys-color-error-light);
   --md-sys-color-error-container: var(--md-sys-color-error-container-light);
   --md-sys-color-on-error: var(--md-sys-color-on-error-light);
-  --md-sys-color-on-error-container: var(--md-sys-color-on-error-container-light);
+  --md-sys-color-on-error-container: var(
+    --md-sys-color-on-error-container-light
+  );
   --md-sys-color-background: var(--md-sys-color-background-light);
   --md-sys-color-on-background: var(--md-sys-color-on-background-light);
   --md-sys-color-surface: var(--md-sys-color-surface-light);
   --md-sys-color-on-surface: var(--md-sys-color-on-surface-light);
   --md-sys-color-surface-variant: var(--md-sys-color-surface-variant-light);
-  --md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-light);
+  --md-sys-color-on-surface-variant: var(
+    --md-sys-color-on-surface-variant-light
+  );
   --md-sys-color-outline: var(--md-sys-color-outline-light);
-  --md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-light);
+  --md-sys-color-inverse-on-surface: var(
+    --md-sys-color-inverse-on-surface-light
+  );
   --md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-light);
   --md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-light);
   --md-sys-color-shadow: var(--md-sys-color-shadow-light);
   --md-sys-color-surface-tint: var(--md-sys-color-surface-tint-light);
   --md-sys-color-outline-variant: var(--md-sys-color-outline-variant-light);
   --md-sys-color-scrim: var(--md-sys-color-scrim-light);
- }
+}
 
-.display-large{
+.display-large {
   font-family: var(--md-sys-typescale-display-large-font-family-name);
   font-style: var(--md-sys-typescale-display-large-font-family-style);
   font-weight: var(--md-sys-typescale-display-large-font-weight);
@@ -361,7 +375,7 @@
   text-transform: var(--md-sys-typescale-display-large-text-transform);
   text-decoration: var(--md-sys-typescale-display-large-text-decoration);
 }
-.display-medium{
+.display-medium {
   font-family: var(--md-sys-typescale-display-medium-font-family-name);
   font-style: var(--md-sys-typescale-display-medium-font-family-style);
   font-weight: var(--md-sys-typescale-display-medium-font-weight);
@@ -371,7 +385,7 @@
   text-transform: var(--md-sys-typescale-display-medium-text-transform);
   text-decoration: var(--md-sys-typescale-display-medium-text-decoration);
 }
-.display-small{
+.display-small {
   font-family: var(--md-sys-typescale-display-small-font-family-name);
   font-style: var(--md-sys-typescale-display-small-font-family-style);
   font-weight: var(--md-sys-typescale-display-small-font-weight);
@@ -381,7 +395,7 @@
   text-transform: var(--md-sys-typescale-display-small-text-transform);
   text-decoration: var(--md-sys-typescale-display-small-text-decoration);
 }
-.headline-large{
+.headline-large {
   font-family: var(--md-sys-typescale-headline-large-font-family-name);
   font-style: var(--md-sys-typescale-headline-large-font-family-style);
   font-weight: var(--md-sys-typescale-headline-large-font-weight);
@@ -391,7 +405,7 @@
   text-transform: var(--md-sys-typescale-headline-large-text-transform);
   text-decoration: var(--md-sys-typescale-headline-large-text-decoration);
 }
-.headline-medium{
+.headline-medium {
   font-family: var(--md-sys-typescale-headline-medium-font-family-name);
   font-style: var(--md-sys-typescale-headline-medium-font-family-style);
   font-weight: var(--md-sys-typescale-headline-medium-font-weight);
@@ -401,7 +415,7 @@
   text-transform: var(--md-sys-typescale-headline-medium-text-transform);
   text-decoration: var(--md-sys-typescale-headline-medium-text-decoration);
 }
-.headline-small{
+.headline-small {
   font-family: var(--md-sys-typescale-headline-small-font-family-name);
   font-style: var(--md-sys-typescale-headline-small-font-family-style);
   font-weight: var(--md-sys-typescale-headline-small-font-weight);
@@ -411,7 +425,7 @@
   text-transform: var(--md-sys-typescale-headline-small-text-transform);
   text-decoration: var(--md-sys-typescale-headline-small-text-decoration);
 }
-.body-large{
+.body-large {
   font-family: var(--md-sys-typescale-body-large-font-family-name);
   font-style: var(--md-sys-typescale-body-large-font-family-style);
   font-weight: var(--md-sys-typescale-body-large-font-weight);
@@ -421,7 +435,7 @@
   text-transform: var(--md-sys-typescale-body-large-text-transform);
   text-decoration: var(--md-sys-typescale-body-large-text-decoration);
 }
-.body-medium{
+.body-medium {
   font-family: var(--md-sys-typescale-body-medium-font-family-name);
   font-style: var(--md-sys-typescale-body-medium-font-family-style);
   font-weight: var(--md-sys-typescale-body-medium-font-weight);
@@ -431,7 +445,7 @@
   text-transform: var(--md-sys-typescale-body-medium-text-transform);
   text-decoration: var(--md-sys-typescale-body-medium-text-decoration);
 }
-.body-small{
+.body-small {
   font-family: var(--md-sys-typescale-body-small-font-family-name);
   font-style: var(--md-sys-typescale-body-small-font-family-style);
   font-weight: var(--md-sys-typescale-body-small-font-weight);
@@ -441,7 +455,7 @@
   text-transform: var(--md-sys-typescale-body-small-text-transform);
   text-decoration: var(--md-sys-typescale-body-small-text-decoration);
 }
-.label-large{
+.label-large {
   font-family: var(--md-sys-typescale-label-large-font-family-name);
   font-style: var(--md-sys-typescale-label-large-font-family-style);
   font-weight: var(--md-sys-typescale-label-large-font-weight);
@@ -452,8 +466,7 @@
   text-decoration: var(--md-sys-typescale-label-large-text-decoration);
 }
 
-.label-medium{
-  font-family: var(--md-sys-typescale-label-medium-font-family-name);
+.label-medium {
   font-style: var(--md-sys-typescale-label-medium-font-family-style);
   font-weight: var(--md-sys-typescale-label-medium-font-weight);
   font-size: var(--md-sys-typescale-label-medium-font-size);
@@ -461,17 +474,14 @@
   line-height: var(--md-sys-typescale-label-medium-line-height);
 }
 
-.label-small{
-  font-family: var(--md-sys-typescale-label-small-font-family-name);
+.label-small {
   font-style: var(--md-sys-typescale-label-small-font-family-style);
   font-weight: var(--md-sys-typescale-label-small-font-weight);
   font-size: var(--md-sys-typescale-label-small-font-size);
-  letter-spacing: var(--md-sys-typescale-label-small-tracking);
-  line-height: var(--md-sys-typescale-label-small-height);
-  text-transform: var(--md-sys-typescale-label-small-text-transform);
-  text-decoration: var(--md-sys-typescale-label-small-text-decoration);
+  letter-spacing: var(--md-sys-typescale-label-small-letter-spacing);
+  line-height: var(--md-sys-typescale-label-small-line-height);
 }
-.title-large{
+.title-large {
   font-family: var(--md-sys-typescale-title-large-font-family-name);
   font-style: var(--md-sys-typescale-title-large-font-family-style);
   font-weight: var(--md-sys-typescale-title-large-font-weight);
@@ -481,7 +491,7 @@
   text-transform: var(--md-sys-typescale-title-large-text-transform);
   text-decoration: var(--md-sys-typescale-title-large-text-decoration);
 }
-.title-medium{
+.title-medium {
   font-family: var(--md-sys-typescale-title-medium-font-family-name);
   font-style: var(--md-sys-typescale-title-medium-font-family-style);
   font-weight: var(--md-sys-typescale-title-medium-font-weight);
@@ -491,7 +501,7 @@
   text-transform: var(--md-sys-typescale-title-medium-text-transform);
   text-decoration: var(--md-sys-typescale-title-medium-text-decoration);
 }
-.title-small{
+.title-small {
   font-family: var(--md-sys-typescale-title-small-font-family-name);
   font-style: var(--md-sys-typescale-title-small-font-family-style);
   font-weight: var(--md-sys-typescale-title-small-font-weight);
@@ -501,7 +511,6 @@
   text-transform: var(--md-sys-typescale-title-small-text-transform);
   text-decoration: var(--md-sys-typescale-title-small-text-decoration);
 }
-
 
 .primary {
   background-color: var(--md-sys-color-primary);
@@ -683,8 +692,6 @@
 .scrim-text {
   color: var(--md-sys-color-scrim);
 }
-
-
 
 * {
   box-sizing: border-box;

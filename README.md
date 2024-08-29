@@ -50,4 +50,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO 
 - link components, and buttons are not agnostic (reason: Reduce execution time, and focus on functionality)
-- remove unused css
+- remove unused declarations
+
+## THE APPROACH
+- during the week I worked on those tasks where I'm feel confident, despite the approach eat the frog

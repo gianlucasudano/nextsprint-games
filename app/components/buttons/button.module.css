@@ -1,11 +1,12 @@
 .button {
   display: flex;
   cursor: pointer;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out allow-discrete;
 }
 
 .button:hover {
-  opacity: 0.8;
-  box-shadow: 0px 0px 3px 0px rgba(60, 60, 59, 0.1);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
 .button[aria-disabled="true"] {
@@ -16,11 +17,12 @@
 .buttonSVG {
   border-radius: 50%;
   border: 0;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-.buttonSVG:hover img {
-  transform: rotate(-60deg);
-  transition: all 300ms;
+.buttonSVG:hover {
+  transform: rotate(-90deg);  
 }
 
 .submit {
