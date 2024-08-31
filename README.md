@@ -46,6 +46,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - https://www.youtube.com/watch?v=9UCoVM6QhnU
 - https://nextjs.org/docs/app/building-your-application/routing/colocation
 - https://nextjs.org/docs/app/building-your-application/optimizing/fonts
+- https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation
+- https://github.com/vercel/next.js/issues/65673#issuecomment-2112746191
+
 
 
 ## TODO 

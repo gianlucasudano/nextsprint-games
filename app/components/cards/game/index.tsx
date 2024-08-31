@@ -1,19 +1,20 @@
+"use client"
 import styles from "./styles.module.css";
 import Image from "next/image";
 
 import { Delete } from "@/app/components/buttons/delete";
-import { StackedCard } from "../StackedCard";
+import { StackedCard } from "../stacked-card";
 
-interface GameProps {
+export interface GameProps {
   category: string;
   imageSrc: string;
   name: string;
 }
 
 export function Game({
-  category = "category",
-  imageSrc = "https://loremflickr.com/640/480/sports",
-  name = "game name",
+  category,
+  imageSrc,
+  name,
 }: GameProps) {
   return (
     <div className={styles.wrapper}>
