@@ -8,13 +8,13 @@ const initialState = {
   message: "",
 };
 
-interface DeleteFormProps extends GameProps {
+interface RemovableCardProps extends GameProps {
   id: string;
 }
 
 const defaultImgSrc = `https://${process.env.LOREMFLICKR_HOSTNAME}/640/480/sports`;
 
-export function DeleteForm({ id, name, category, imageSrc }: DeleteFormProps) {
+export function RemovableCard({ id, name, category, imageSrc }: RemovableCardProps) {
   const imgSrcUrl = `${imageSrc}?foo=${name}` || defaultImgSrc;
   const [state, formAction] = useFormState(deleteGame, initialState);
 

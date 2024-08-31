@@ -1,7 +1,7 @@
 "use server";
 
 import styles from "./styles.module.css";
-import { DeleteForm } from "@/app/components/delete-form";
+import { RemovableCard } from "@/app/components/removable-card";
 
 interface GameCardProps {
   category: string;
@@ -18,7 +18,7 @@ export async function Games({ games }: GamesProps) {
   return (
     <div className={styles.wrapper}>
       {games.map(({ category, name, thumbnail, id }) => (
-        <DeleteForm
+        <RemovableCard
           key={id}
           category={category}
           name={name}
