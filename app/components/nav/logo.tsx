@@ -9,7 +9,6 @@ export function Logo() {
         alt="Logo"
         height={24}
         width={193}
-        priority
       />
     </Link>
   );

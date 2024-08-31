@@ -22,7 +22,6 @@ export function Delete({ customClass }: DeleteProps) {
         alt="Delete Icon"
         width={32}
         height={32}
-        priority
       />
     </button>
   );
