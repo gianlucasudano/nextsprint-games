@@ -36,6 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## resources / links / documentation
+
 - https://mockapi.io/
 - https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
 - https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations
@@ -49,11 +50,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation
 - https://github.com/vercel/next.js/issues/65673#issuecomment-2112746191
 
+## TODO
 
-
-## TODO 
-- link components, and buttons are not agnostic (reason: Reduce execution time, and focus on functionality)
-- remove unused declarations
+- remove unused css declarations
+- unit test: at least the add-game-form component
+- adjust data and form validation, for delete action, and removable-card component
+- deploy on Vercel
 
 ## THE APPROACH
+
 - during the week I worked on those tasks where I'm feel confident, despite the approach eat the frog

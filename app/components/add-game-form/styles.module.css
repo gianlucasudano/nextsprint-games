@@ -1,0 +1,49 @@
+.border {
+  border-color: var(--md-sys-color-surface-light);
+  border-style: solid;
+  border-width: thin;
+  border-radius: 0.3rem;
+}
+
+.fieldset {
+  composes: border;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-transform: uppercase;
+}
+
+.textInput {
+  composes: border;
+  padding: 0.5rem;
+}
+
+.legend {
+  padding: 0 0.5rem;
+}
+
+.groupedLabels {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}

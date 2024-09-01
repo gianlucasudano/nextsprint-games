@@ -10,7 +10,7 @@ export async function deleteGame(
   prevState: {
     message: string;
   },
-  formData: FormData
+  formData: FormData,
 ) {
   const schema = z.object({
     id: z.string().min(1),
@@ -36,35 +36,38 @@ export async function deleteGame(
 }
 
 export async function addGame(
-  prevState: {
-    message: string;
-  },
-  formData: FormData
+  prevState: { message: string[] | undefined },
+  formData: FormData,
 ) {
   const schema = z.object({
-    name: z.string().min(1),
-    category: z.string().min(1),
+    name: z.string().min(1, "Name is a required field"),
+    category: z.string().min(1, "Category is a required field"),
   });
-  const data = schema.parse({
+  const validation = schema.safeParse({
     category: formData.get("category"),
     name: formData.get("name"),
   });
 
-  const newGame = {
-    name: data.name,
-    category: data.category,
-  };
-
   try {
-    await fetch(apiGamesUrl, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(newGame),
-    });
-    revalidatePath("/");
+    if (validation.success) {
+      await fetch(apiGamesUrl, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(validation.data),
+      });
+      revalidatePath("/");
+    }
   } catch (error) {
-    return { message: `Failed to add ${data.name}` };
+    console.log("error", error);
   } finally {
-    redirect("/");
+    if (validation.success) {
+      redirect("/");
+    } else {
+      return {
+        message: validation.error?.errors.map(
+          (errorOccurred) => errorOccurred.message,
+        ),
+      };
+    }
   }
 }

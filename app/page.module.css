@@ -7,12 +7,15 @@
 
 .main {
   composes: centerContent;
-  padding: 5rem 0 3rem 0;
+  padding: 5rem 0.5rem 3rem 0.5rem;
   min-height: 100vh;
 }
 
 .content {
   composes: centerContent;
   max-width: var(--max-width);
-
+  width: calc(100vw - 1rem);
+  @media (min-width: 768px) {
+    width: auto;
+  }
 }
