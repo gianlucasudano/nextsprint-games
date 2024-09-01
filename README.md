@@ -1,6 +1,3 @@
-Certamente! Ecco la prima sezione di un file `README.md` basato sulle informazioni del PDF che hai caricato.
-
-```markdown
 # Frontend Developer Test
 
 This project is a technical test designed to evaluate your knowledge of Next.js fundamentals, including:
@@ -35,7 +32,6 @@ You can earn bonus points by implementing the following:
 3. **Form Validation**: Implement robust form validation.
 4. **Static Page Generation**: Use Next.js static generation features.
 5. **Design**: Show a good eye for design and user experience.
-
 
 ## Tech Approach
 
