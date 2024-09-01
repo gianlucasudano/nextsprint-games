@@ -9,7 +9,9 @@ export async function GamesList() {
 
   return (
     <main className={`${styles.main} background`}>
-      <Games games={games} />
+      <div className={styles.content}>
+        <Games games={games} />
+      </div>
     </main>
   );
 }

@@ -30,8 +30,8 @@ export function Game({
         />
       </StackedCard>
       <div className={styles.metaInfo}>
-        <span className="label-small">{name}</span>
-        <span className="label-small">{category}</span>
+        <span className={`${styles.label} label-small`}>{name}</span>
+        <span className={`${styles.label} ${styles.rightLabel} label-small`}>{category}</span>
       </div>
     </div>
   );
