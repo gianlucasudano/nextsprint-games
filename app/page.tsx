@@ -10,7 +10,8 @@ export async function GamesList() {
   return (
     <main className={`${styles.main} background`}>
       <div className={styles.content}>
-        <Games games={games} />
+        {Array.isArray(games) && <Games games={games} />}
+        {games?.message && <p>{games?.message}</p>}
       </div>
     </main>
   );

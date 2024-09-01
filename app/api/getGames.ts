@@ -8,7 +8,14 @@ export async function getGames() {
       headers: { "content-type": "application/json" },
     });
 
-    return response.json();
+    if(response.status === 404) {
+      return {
+        message: 'The API call returned a not found.'
+      };
+    } else {
+      return response.json();
+    }
+    
   } catch (error) {
     return { message: `Failed to loads all the games: ${error}` };
   }

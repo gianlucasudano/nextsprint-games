@@ -10,7 +10,7 @@ export async function deleteGame(
   prevState: {
     message: string;
   },
-  formData: FormData,
+  formData: FormData
 ) {
   const schema = z.object({
     id: z.string().min(1),
@@ -36,8 +36,8 @@ export async function deleteGame(
 }
 
 export async function addGame(
-  prevState: { message: string[] | undefined },
-  formData: FormData,
+  prevState: { message: string[] | [] },
+  formData: FormData
 ) {
   const schema = z.object({
     name: z.string().min(1, "Name is a required field"),
@@ -48,14 +48,17 @@ export async function addGame(
     name: formData.get("name"),
   });
 
+  
   try {
     if (validation.success) {
-      await fetch(apiGamesUrl, {
+      const response = await fetch(apiGamesUrl, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(validation.data),
       });
-      revalidatePath("/");
+      if (response.status === 200) {
+        revalidatePath("/");
+      }
     }
   } catch (error) {
     console.log("error", error);
@@ -65,7 +68,7 @@ export async function addGame(
     } else {
       return {
         message: validation.error?.errors.map(
-          (errorOccurred) => errorOccurred.message,
+          (errorOccurred) => errorOccurred.message
         ),
       };
     }
