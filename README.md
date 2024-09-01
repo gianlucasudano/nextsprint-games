@@ -35,76 +35,76 @@ You can earn bonus points by implementing the following:
 
 ## Tech Approach
 
-`Initial App Setup`:
+### Initial App Setup
 
-To speed up the initial setup, I utilized my [starter web application](https://github.com/gianlucasudano/web-dev-lab).
-While this allowed for more time to understand the integration of dependencies required for this home task, it did result in some unnecessary dependencies and unused features being included.
+This project is a [Next.js](https://nextjs.org/) application, initialized using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-* **Pros**: Environment was ready to use and based on my previous expertise.
-* **Cons**: Some unnecessary dependencies and features are not used or useless for this kind of project.
+### Project Organization and File Colocation
 
-`Folder Structure`:
+I adopted a conventional approach to structure the project, ensuring clear separation of concerns, scalability, and straightforward management and access to resources.
 
-I followed a conventional approach to ensure separation of concerns, scalability, and easy management and accessibility of resources.
+- [Next.js File Colocation](https://nextjs.org/docs/app/building-your-application/routing/colocation)
 
-* **Pros**: Ensures easy management and accessibility of resources.
-* **Cons**: No cons
+* **Pros**: Facilitates easy management and access to resources.
+* **Cons**: None identified.
 
-`UI and Use of Third-Party Libraries`:
+### UI Components
 
-I used ready-made components, combining those in customized components.
+I created both reusable and non-reusable React components. There is room for improvement, such as removing hardcoded props and reducing the specificity of some components. In other words, certain components could be refactored to be more agnostic, making them more suitable for a growing project.
 
-* **Pros**: Speeds up implementation and allows for focus on the main task.
-* **Cons**: There is a small risk associated with the use of external libraries, such as annoying problems or difficulties with profiling.
+- **Pros**: Enables the creation of simple components, reducing development time.
+- **Cons**: Some components may need to be revisited and made more scalable/extensible.
 
-`Testing`:
+### Testing [TODO]
 
-I used React Testing Library and Vitest, which is recommended by most known frameworks.
+Due to time constraints, I was unable to implement testing. However, I would have liked to add unit tests, particularly for components that involve conditional rendering based on API call states.
 
-* **Pros**: Ensures the quality of the app and provides a reliable testing framework.
-[Vitest](https://vitest.dev/guide/comparisons.html#jest)
+I would have used React Testing Library, MSW, and Vitest, which are recommended by most popular frameworks.
 
-* **Cons**: no cons
+## Tasks Prioritization
 
-## Tasks-Prioritization
+### Initial Approach
 
-To begin with, my goal was to render the layers and map using hard-coded data. To achieve this, I followed a structured approach that involved defining the initial props input for layers, followed by the initial props for DeckGL. I also defined constant values and types to ensure consistency throughout the codebase.
+The initial approach focused on research. After carefully reading through the task requirements, I explored online documentation to identify the technologies I needed to use. I then attempted to draft a preliminary work plan. However, I deviated from this plan because I had limited hours available during the first few days of work. Instead of tackling potentially more challenging problems first, I began with tasks where I felt more confident.
 
-This approach helped me to proceed safely and avoid common issues that can arise from simple typographical errors. Additionally, by using clear rules and guidelines, I was able to work efficiently and avoid frustrating issues that could have slowed down progress.
+### Original Plan:
 
-Throughout the implementation process, I gradually added the required features, optimized the code, added the missing tests, and refactored or adjusted pieces of code that were not consistent.
+- **Day 1-2**: Setup and creation of main pages.
+- **Day 3-4**: Implementation of CRUD functionality and caching management.
+- **Day 5**: Styling and implementation of optional bonus features.
+- **Day 6**: Final testing and publication.
 
-As a result of these efforts, the final outcome is a rendered map with all layers displayed on the homepage. The map is also controlled by three different controls, providing users with a smooth and user-friendly experience.
+### Updated Plan (Broad Outline):
+
+- Initial setup
+- Creation of basic interactive components and pages
+- Navigation component and its integration into the layout
+- Game card component
+- Game card list, action functions, fetch API (GET, POST, DELETE)
+- Creation of the form to add new games
+- Managed page layout with responsive behavior
 
 ## Issues and how I resolved
 
-*`Error 401 using the default value of API_BASE_URL`*
+### TypeError: `(0 , react__WEBPACK_IMPORTED_MODULE_1__.useActionState) is not a function or its return value is not iterable`
 
-One issue I encountered during development was an error 401 when using the default value of API_BASE_URL. I discovered that there are different API base URLs available, and the one to be used is associated with the account created in the Carto app.
+One issue I encountered during development was related to the use of the `useActionState` hook. Unfortunately, the official documentation and examples did not provide a solution, or perhaps I didn't search thoroughly enough.
 
-Initially, this was not clear to me, as it was not mentioned in the documentation. However, I was able to identify the correct URL by observing the network call in the public share version of the app.
+I finally found a solution to the problem in a thread on GitHub:
+[GitHub Issue #65673 - Comment](https://github.com/vercel/next.js/issues/65673#issuecomment-2112746191)
 
-I later discovered that the API base URL is available in the developer's area of the Carto app! 🙃
+## Things That Could Be Improved
 
-*`ERR_REQUIRE_ESM`*
+There are several aspects that could be improved before a potential production release. Here is a TODO list of the key areas:
 
-I also faced an issue with an ERR_REQUIRE_ESM error while working on the project. This error occurred due to the imported files by dependencies using the "require" syntax instead of "import" as modules.
-
-To resolve this issue, I researched and found a solution on the web, which I then applied to my codebase. By implementing the solution, I was able to successfully address the error and continue with the project.
-
-## Things that could be improved
-
-There are a couple of areas in the project that could be improved.
-
-Firstly, the **LayerStepsSlider** component could benefit from better handling of the **onChange** event, as there is currently a potential issue with continuous executions of the callback function. This could be resolved by debouncing the event. While the Material UI Slider component does expose an API called **onChangeCommitted**, using it converts the component to an uncontrolled one and generates a warning in the console. Therefore, alternative solutions should be explored.
-
-Secondly, there is an issue with the profiling of the Slider component, which causes it to re-render each time the user interacts with the map and performs an action such as zooming in or out.
-
-Additionally, the readability of the **Home** file could be improved by reducing the amount of code. For example, the **handleOnChangeCommitted** function could be moved outside of the **Home** component, and each **LayerController** could be moved to a separate file or a higher-order component that receives a renderer function could be used instead. This would help to improve the organization and structure of the codebase.
+- Remove unused CSS declarations.
+- Add unit tests, at least for the `add-game-form` component.
+- Refine data and form validation, particularly for the delete action and the `removable-card` component.
+- Update project icons (favicons).
 
 ## Feedback about the test
 
-Overall, I really enjoyed the test and found it to be a positive experience. It increased my curiosity about the challenges of working in Carto and offered an initial idea of the types of challenges that may be encountered.
+Overall, I really enjoyed the test and found it to be a positive experience. It increased my curiosity about the challenges of working in NETX SPRINT and offered an initial idea of the types of challenges that may be encountered.
 
 I appreciated the honesty of the test and the fact that it allowed me to learn new things and practice my existing skills. Overall, it was a great opportunity to showcase my abilities and demonstrate my passion for programming.
 
@@ -113,55 +113,69 @@ I appreciated the honesty of the test and the fact that it allowed me to learn n
 Download, or clone the repo in one folder and install packages.
 
 ```bash
-To install dependencies use `npm install`
+To install dependencies use `npm i`
 ```
 
-# Usage
+Create a file .env.local, based on the model .env.local.example, and add your MOCKAPI_PROJECT_TOKEN
 
-To run the app, open your terminal and execute the command `npm run dev`. Once the app has started, you should see something similar to the following.
-###  Runs the app `npm run dev`
 ```bash
-     VITE v4.1.1  ready in 643 ms
-      ➜  Local:   http://localhost:5173/
-      ➜  Network: use --host to expose
-      ➜  press h to show help
+MOCKAPI_PROJECT_TOKEN = ''
 ```
 
-#
-### Navigates on the browser `http://localhost:5173`
-Once the app and the server are running, open a browser and visit this page: http://localhost:5173
-#
-To run all tests, open a new tab in your terminal and execute the command `npm run test`. Once the tests has executed, you should see something similar to the following.
-### Runs the tests `npm run test`
-``` bash
-    ✓ src/pages/Example/ErrorCard.test.tsx (1)
-    ✓ src/pages/Example/AddData.test.tsx (2) 801ms
-    ✓ src/pages/Example/DataDisplay.test.tsx (3) 791ms
-    ✓ src/App.test.tsx (2)
+## Getting Started
 
-    Test Files  4 passed (4)
-         Tests  8 passed (8)
-      Start at  18:50:49
-      Duration  5.92s (transform 227ms, setup 3.52s, collect 7.34s, tests 1.75s)
+First, run the development server:
 
-
-    PASS  Waiting for file changes...
-          press h to show help, press q to quit
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-You can see an online version at this address https://gs-carto-map.vercel.app/
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## The project utilized the following tools/dependencies:
+## The Project Utilized the Following Tools/Dependencies
 
-- "vite": https://vitejs.dev/
-- "vitest": https://vitest.dev/
-- "react": https://reactjs.org/
-- "typescript": https://www.typescriptlang.org/
-- "testing-library": https://testing-library.com/
-- "Carto Layer": https://deck.gl/docs/api-reference/carto/carto-layer
-- "DeckGL react": https://deck.gl/docs/api-reference/react/deckgl
-- "Deck core": https://deck.gl/docs/api-reference/core/deck
-- "Deck layers": https://deck.gl/docs/api-reference/layers
-- "react-map-gl v5": https://deck.gl/docs/api-reference/carto/basemap
-- "MUI": https://mui.com/
-- "mui-color-input": https://viclafouch.github.io/mui-color-input/
+### Dependencies
+- **[Next.js 14.2.6](https://nextjs.org/):** A React framework that enables server-side rendering and static site generation.
+- **[React 18.3.1](https://reactjs.org/):** A JavaScript library for building user interfaces.
+- **[React DOM 18.3.1](https://reactjs.org/docs/react-dom.html):** Serves as the entry point to the DOM and server renderers for React.
+- **[Zod ^3.23.8](https://zod.dev/):** A TypeScript-first schema declaration and validation library.
+
+### Dev Dependencies
+- **[@types/node ^20](https://www.npmjs.com/package/@types/node):** Type definitions for Node.js.
+- **[@types/react 18.3.0](https://www.npmjs.com/package/@types/react):** Type definitions for React.
+- **[@types/react-dom 18.3.0](https://www.npmjs.com/package/@types/react-dom):** Type definitions for React DOM.
+- **[ESLint ^8](https://eslint.org/):** A pluggable linting utility for JavaScript and JSX.
+- **[eslint-config-next 14.2.6](https://www.npmjs.com/package/eslint-config-next):** ESLint configuration used by Next.js.
+- **[TypeScript ^5](https://www.typescriptlang.org/):** A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+
+
+## Resources / Links / Documentation
+
+### Next.js Documentation
+- [Next.js Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching)
+- [Server Actions and Mutations](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
+- [Routing and Colocation](https://nextjs.org/docs/app/building-your-application/routing/colocation)
+- [Optimizing Fonts](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
+- [Static Site Generation](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation)
+
+### React Documentation
+- [React Server Actions](https://react.dev/reference/rsc/server-actions)
+
+### Tutorials and Examples
+- [Next.js Forms Example (GitHub)](https://github.com/vercel/next.js/tree/canary/examples/next-forms)
+- [YouTube - Next.js Data Fetching Strategies](https://www.youtube.com/watch?v=dDpZfOQBMaU)
+- [YouTube - Next.js Caching Strategies](https://www.youtube.com/watch?v=9UCoVM6QhnU)
+- [Blog - Next.js Caching Strategies for Optimal Performance](https://nextjsstarter.com/blog/nextjs-caching-strategies-for-optimal-performance/)
+
+### Tools
+- [MockAPI](https://mockapi.io/)
+
+### Issue Resolution
+- [GitHub Issue - useActionState Error](https://github.com/vercel/next.js/issues/65673#issuecomment-2112746191)
+
