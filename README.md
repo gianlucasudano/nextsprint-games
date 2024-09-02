@@ -50,7 +50,7 @@ I adopted a conventional approach to structure the project, ensuring clear separ
 
 ### UI Components
 
-I created both reusable and non-reusable React components. There is room for improvement, such as removing hardcoded props and reducing the specificity of some components. In other words, certain components could be refactored to be more agnostic, making them more suitable for a growing project.
+I created both reusable and non-reusable React components. To speed up development, some components were intentionally made non-reusable. However, with some refactoring, these components can be improved for future scalability. For example, the `AddGameLink` component could be refactored to accept props, allowing it to serve as a more generic navigation component that retains a button-like appearance.
 
 - **Pros**: Enables the creation of simple components, reducing development time.
 - **Cons**: Some components may need to be revisited and made more scalable/extensible.
@@ -141,12 +141,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## The Project Utilized the Following Tools/Dependencies
 
 ### Dependencies
+
 - **[Next.js 14.2.6](https://nextjs.org/):** A React framework that enables server-side rendering and static site generation.
 - **[React 18.3.1](https://reactjs.org/):** A JavaScript library for building user interfaces.
 - **[React DOM 18.3.1](https://reactjs.org/docs/react-dom.html):** Serves as the entry point to the DOM and server renderers for React.
 - **[Zod ^3.23.8](https://zod.dev/):** A TypeScript-first schema declaration and validation library.
 
 ### Dev Dependencies
+
 - **[@types/node ^20](https://www.npmjs.com/package/@types/node):** Type definitions for Node.js.
 - **[@types/react 18.3.0](https://www.npmjs.com/package/@types/react):** Type definitions for React.
 - **[@types/react-dom 18.3.0](https://www.npmjs.com/package/@types/react-dom):** Type definitions for React DOM.
@@ -154,10 +156,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **[eslint-config-next 14.2.6](https://www.npmjs.com/package/eslint-config-next):** ESLint configuration used by Next.js.
 - **[TypeScript ^5](https://www.typescriptlang.org/):** A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 
-
 ## Resources / Links / Documentation
 
 ### Next.js Documentation
+
 - [Next.js Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching)
 - [Server Actions and Mutations](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
 - [Routing and Colocation](https://nextjs.org/docs/app/building-your-application/routing/colocation)
@@ -165,17 +167,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Static Site Generation](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation)
 
 ### React Documentation
+
 - [React Server Actions](https://react.dev/reference/rsc/server-actions)
 
 ### Tutorials and Examples
+
 - [Next.js Forms Example (GitHub)](https://github.com/vercel/next.js/tree/canary/examples/next-forms)
 - [YouTube - Next.js Data Fetching Strategies](https://www.youtube.com/watch?v=dDpZfOQBMaU)
 - [YouTube - Next.js Caching Strategies](https://www.youtube.com/watch?v=9UCoVM6QhnU)
 - [Blog - Next.js Caching Strategies for Optimal Performance](https://nextjsstarter.com/blog/nextjs-caching-strategies-for-optimal-performance/)
 
 ### Tools
+
 - [MockAPI](https://mockapi.io/)
 
 ### Issue Resolution
-- [GitHub Issue - useActionState Error](https://github.com/vercel/next.js/issues/65673#issuecomment-2112746191)
 
+- [GitHub Issue - useActionState Error](https://github.com/vercel/next.js/issues/65673#issuecomment-2112746191)
